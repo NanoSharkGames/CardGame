@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0EEBF18E-272D-828E-0FE3-FE5D1E52DE1C}</ProjectGuid>
+    <ProjectGuid>{C9DF638D-0DD9-EA4B-E977-23D2D893EDE3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -55,20 +55,29 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/Targets/ITargetable.cs" />
+    <Compile Include="Assets/Scripts/Targets/IDamageable.cs" />
     <Compile Include="Assets/Scripts/Deck/Base/DeckPosition.cs" />
-    <Compile Include="Assets/Scripts/AbilityCardData.cs" />
-    <Compile Include="Assets/Scripts/AbilityCard.cs" />
+    <Compile Include="Assets/Scripts/Deck/AbilityCards/Cards/AbilityCardData.cs" />
+    <Compile Include="Assets/Scripts/Deck/AbilityCards/Cards/AbilityCard.cs" />
+    <Compile Include="Assets/Scripts/Deck/AbilityCards/Card Effects/CardPlayEffect.cs" />
+    <Compile Include="Assets/Scripts/Deck/AbilityCards/Card Effects/DamagePlayEffect.cs" />
+    <Compile Include="Assets/Scripts/Deck/AbilityCards/Card Effects/SpawnPlayEffect.cs" />
     <Compile Include="Assets/Scripts/Deck/Base/Deck.cs" />
     <Compile Include="Assets/Scripts/Deck/Base/Card.cs" />
+    <Compile Include="Assets/Scripts/Targets/Creature.cs" />
     <Compile Include="Assets/Scripts/Controllers/DeckTester.cs" />
-    <Compile Include="Assets/Scripts/Targets/ITargetable.cs" />
-    <Compile Include="Assets/Scripts/Creature.cs" />
     <Compile Include="Assets/Scripts/Targets/TargetController.cs" />
-    <Compile Include="Assets/Scripts/CardPlayEffect.cs" />
-    <Compile Include="Assets/Scripts/Targets/IDamageable.cs" />
-    <Compile Include="Assets/Scripts/DamagePlayEffect.cs" />
-    <Compile Include="Assets/Scripts/SpawnPlayEffect.cs" />
-    <Compile Include="Assets/Scripts/AbilityCardView.cs" />
+    <Compile Include="Assets/Scripts/Deck/AbilityCards/Cards/AbilityCardView.cs" />
+    <Compile Include="Assets/Scripts/StateMachine/Base/State.cs" />
+    <Compile Include="Assets/Scripts/StateMachine/Base/StateMachine.cs" />
+    <Compile Include="Assets/Scripts/StateMachine/CardGame/CardGameSM.cs" />
+    <Compile Include="Assets/Scripts/StateMachine/CardGame/CardGameState.cs" />
+    <Compile Include="Assets/Scripts/StateMachine/CardGame/SetupCardGameState.cs" />
+    <Compile Include="Assets/Scripts/StateMachine/CardGame/PlayerTurnCardGameState.cs" />
+    <Compile Include="Assets/Scripts/InputController.cs" />
+    <Compile Include="Assets/Scripts/StateMachine/CardGame/EnemyTurnCardGameState.cs" />
+    <Compile Include="Assets/Scripts/Controllers/CardGameUIController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
