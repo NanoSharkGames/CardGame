@@ -1,8 +1,15 @@
 ﻿<Properties StartupConfiguration="{C9DF638D-0DD9-EA4B-E977-23D2D893EDE3}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/StateMachine/CardGame/PlayerTurnCardGameState.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Card System/Deck/Card Effects/ActionEffects/Ability Actions/AttackDamageBoostPlayEffect.cs">
     <Files>
-      <File FileName="Assets/Scripts/Controllers/CardGameUIController.cs" Line="36" Column="1" />
-      <File FileName="Assets/Scripts/StateMachine/CardGame/PlayerTurnCardGameState.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Card System/Controllers/DeckTester.cs" Line="91" Column="39" IsPinned="True" />
+      <File FileName="Assets/Scripts/Card System/Deck/ActionCards/ActionCardView.cs" Line="18" Column="24" IsPinned="True" />
+      <File FileName="Assets/Scripts/Card System/Deck/ActionCards/ActionCard.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Card System/Controllers/PlayerHandUIController.cs" Line="18" Column="33" />
+      <File FileName="Assets/Scripts/Card System/StateMachine/CardGame/PlayerTurnCardGameState.cs" Line="31" Column="55" />
+      <File FileName="Assets/Scripts/Card System/Deck/Base/Deck.cs" Line="145" Column="1" />
+      <File FileName="Assets/Scripts/Card System/StateMachine/CardGame/SetupCardGameState.cs" Line="32" Column="6" />
+      <File FileName="Assets/Scripts/Card System/Deck/Card Effects/ActionEffects/AttackPlayEffect.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Card System/Deck/Card Effects/ActionEffects/Ability Actions/AttackDamageBoostPlayEffect.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -10,16 +17,31 @@
           <Node name="SRC" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Controllers" expanded="True" />
-                <Node name="Deck" expanded="True">
-                  <Node name="AbilityCards" expanded="True" />
-                </Node>
-                <Node name="StateMachine" expanded="True">
-                  <Node name="Base" expanded="True" />
-                  <Node name="CardGame" expanded="True">
-                    <Node name="PlayerTurnCardGameState.cs" selected="True" />
+                <Node name="Card System" expanded="True">
+                  <Node name="Controllers" expanded="True" />
+                  <Node name="Deck" expanded="True">
+                    <Node name="AbilityCards" expanded="True">
+                      <Node name="Cards" expanded="True" />
+                    </Node>
+                    <Node name="ActionCards" expanded="True" />
+                    <Node name="Base" expanded="True" />
+                    <Node name="Card Effects" expanded="True">
+                      <Node name="ActionEffects" expanded="True">
+                        <Node name="Ability Actions" expanded="True">
+                          <Node name="AttackDamageBoostPlayEffect.cs" selected="True" />
+                        </Node>
+                      </Node>
+                    </Node>
+                  </Node>
+                  <Node name="StateMachine" expanded="True">
+                    <Node name="CardGame" expanded="True" />
                   </Node>
                 </Node>
+                <Node name="Commands" expanded="True" />
+                <Node name="StateMachine" expanded="True">
+                  <Node name="Base" expanded="True" />
+                </Node>
+                <Node name="Targets" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -29,7 +51,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d5dd123d-b212-428b-8c67-5eaac3b0e3e0" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a4b1cb4a-a5cf-49c1-a985-4b4352ebecbc" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
