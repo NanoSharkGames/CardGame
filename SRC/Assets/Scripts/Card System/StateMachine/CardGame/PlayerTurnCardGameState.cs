@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class PlayerTurnCardGameState : CardGameState
 {
     [SerializeField] Text _playerTurnTextUI = null;
-    [SerializeField] DeckTester _deckTester = null;
+    [SerializeField] Player _player = null;
 
     int _playerTurnCount = 0;
 
@@ -19,7 +19,7 @@ public class PlayerTurnCardGameState : CardGameState
         // Hook into events
         StateMachine.Input.PressedConfirm += OnPressedConfirm;
 
-        _deckTester.Draw();
+        _player.BeginTurn();
     }
 
     public override void Exit()

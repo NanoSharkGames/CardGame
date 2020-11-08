@@ -3,8 +3,6 @@ using UnityEngine.UI;
 
 public class ActionCardView : MonoBehaviour
 {
-    [HideInInspector] public DeckTester deckTester = null;
-
     ActionCard card = null;
     [SerializeField] Text _nameTextUI = null;
     [SerializeField] Text _descTextUI = null;
@@ -41,6 +39,6 @@ public class ActionCardView : MonoBehaviour
 
     public void PlayCard()
     {
-        deckTester.PlayCard(card, slot);
+        TargetController.CurrentPlayer.PlayCard(card, slot);
     }
 }

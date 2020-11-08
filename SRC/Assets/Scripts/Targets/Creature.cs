@@ -2,7 +2,7 @@
 
 public class Creature : MonoBehaviour, ITargetable, IDamageable
 {
-    int _currentHealth = 10;
+    int _curHP = 10;
 
     public void Kill()
     {
@@ -12,10 +12,10 @@ public class Creature : MonoBehaviour, ITargetable, IDamageable
 
     public void TakeDamage(int damage)
     {
-        _currentHealth -= damage;
-        Debug.Log("Took damage. Remaining health: " + _currentHealth);
+        _curHP -= damage;
+        Debug.Log("Took damage. Remaining health: " + _curHP);
 
-        if (_currentHealth <= 0)
+        if (_curHP <= 0)
         {
             Kill();
         }

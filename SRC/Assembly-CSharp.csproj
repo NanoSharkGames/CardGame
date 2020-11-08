@@ -62,7 +62,6 @@
     <Compile Include="Assets/Scripts/Card System/Deck/Card Effects/ActionEffects/AttackPlayEffect.cs" />
     <Compile Include="Assets/Scripts/StateMachine/Base/State.cs" />
     <Compile Include="Assets/Scripts/Card System/Deck/AbilityCards/Cards/AbilityCardData.cs" />
-    <Compile Include="Assets/Scripts/Card System/Deck/Card Effects/ActionEffects/MovePlayEffect.cs" />
     <Compile Include="Assets/Scripts/Card System/Controllers/PlayerHandUIController.cs" />
     <Compile Include="Assets/Scripts/Commands/ICommand.cs" />
     <Compile Include="Assets/Scripts/Card System/StateMachine/CardGame/CardGameState.cs" />
@@ -81,12 +80,14 @@
     <Compile Include="Assets/Scripts/Targets/Creature.cs" />
     <Compile Include="Assets/Scripts/Card System/Controllers/CardGameUIController.cs" />
     <Compile Include="Assets/Scripts/Card System/Deck/ActionCards/ActionCard.cs" />
-    <Compile Include="Assets/Scripts/Card System/Controllers/DeckTester.cs" />
     <Compile Include="Assets/Scripts/Targets/TargetController.cs" />
     <Compile Include="Assets/Scripts/Card System/StateMachine/CardGame/SetupCardGameState.cs" />
     <Compile Include="Assets/Scripts/Card System/StateMachine/CardGame/EnemyTurnCardGameState.cs" />
     <Compile Include="Assets/Scripts/Card System/Deck/AbilityCards/Cards/AbilityCardView.cs" />
     <Compile Include="Assets/Scripts/Card System/StateMachine/CardGame/CardGameSM.cs" />
+    <Compile Include="Assets/Scripts/Card System/Controllers/PlayerStatsUIController.cs" />
+    <Compile Include="Assets/Scripts/Player.cs" />
+    <Compile Include="Assets/Scripts/Targets/IPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
