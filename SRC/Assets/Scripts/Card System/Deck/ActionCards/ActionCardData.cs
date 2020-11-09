@@ -20,4 +20,7 @@ public class ActionCardData : ScriptableObject
 
     [SerializeField] int _actionPointCost = 1;
     public int ActionPointCost => _actionPointCost;
+
+    [SerializeField] bool _targetsEnemies = true;
+    public bool TargetsEnemies => _targetsEnemies;
 }

@@ -18,3 +18,4 @@ MonoBehaviour:
   _playEffect: {fileID: 11400000, guid: 872de18e9cb8344f29cf92b7107f9efa, type: 2}
   _description: +4 ATK DMG
   _actionPointCost: 2
+  _targetsEnemies: 0

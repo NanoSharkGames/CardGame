@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class PlayerHandUIController : MonoBehaviour
 {
-    public List<ActionCardView> handCards;
+    [SerializeField] List<ActionCardView> handCards;
 
     private void Start()
     {
@@ -14,6 +14,20 @@ public class PlayerHandUIController : MonoBehaviour
             handCard.SetSlot(i);
 
             handCard.gameObject.SetActive(false);
+        }
+    }
+
+    public ActionCardView GetHandSlot(int slot)
+    {
+        return handCards[slot];
+    }
+
+    public void HideHand()
+    {
+        for (int i = 0; i < handCards.Count; i++)
+        {
+            ActionCardView slot = GetHandSlot(i);
+            slot.Hide();
         }
     }
 }

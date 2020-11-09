@@ -34,11 +34,16 @@ public class ActionCardView : MonoBehaviour
     public void EmptySlot()
     {
         card = null;
-        gameObject.SetActive(false);
+        Hide();
     }
 
     public void PlayCard()
     {
         TargetController.CurrentPlayer.PlayCard(card, slot);
+    }
+
+    public void Hide()
+    {
+        gameObject.SetActive(false);
     }
 }

@@ -6,6 +6,18 @@ public class PlayerTurnCardGameState : CardGameState
     [SerializeField] Text _playerTurnTextUI = null;
     [SerializeField] Player _player = null;
 
+    private void OnEnable()
+    {
+        Creature.Died += OnEnemyDie;
+        Player.Died += OnPlayerDie;
+    }
+
+    private void OnDisable()
+    {
+        Creature.Died -= OnEnemyDie;
+        Player.Died -= OnPlayerDie;
+    }
+
     int _playerTurnCount = 0;
 
     public override void Enter()
@@ -27,6 +39,8 @@ public class PlayerTurnCardGameState : CardGameState
         _playerTurnTextUI.gameObject.SetActive(false);
         Debug.Log("Player Turn: Exiting...");
 
+        _player.EndTurn();
+
         // Unhook from events
         StateMachine.Input.PressedConfirm -= OnPressedConfirm;
     }
@@ -34,5 +48,15 @@ public class PlayerTurnCardGameState : CardGameState
     void OnPressedConfirm()
     {
         StateMachine.ChangeState<EnemyTurnCardGameState>();
+    }
+
+    void OnEnemyDie()
+    {
+        StateMachine.ChangeState<WinState>();
+    }
+
+    void OnPlayerDie()
+    {
+        StateMachine.ChangeState<LoseState>();
     }
 }

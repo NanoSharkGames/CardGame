@@ -12,11 +12,24 @@ public class AttackPlayEffect : CardPlayEffect
         // Test to see if the target is damageable
         IDamageable objectToDamage = target as IDamageable;
 
+        IPlayer player = TargetController.CurrentPlayer;
+        Player playerObj = player as Player;
+
         // If it is, apply damage
         if (objectToDamage != null)
         {
-            objectToDamage.TakeDamage(_damageAmount);
             Debug.Log("Add damage to the target");
+
+            int _damageBonus = 0;
+
+            if (playerObj != null)
+            {
+                _damageBonus = playerObj.GetDamageBonus();
+
+                Debug.Log("Bonus of attack: " + _damageBonus.ToString());
+            }
+
+            objectToDamage.TakeDamage(_damageAmount + _damageBonus);
         }
         else
         {

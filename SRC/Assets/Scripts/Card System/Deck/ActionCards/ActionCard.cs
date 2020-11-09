@@ -7,6 +7,7 @@ public class ActionCard : Card
     public CardPlayEffect PlayEffect { get; protected set; }
     public string ActionDesc { get; protected set; }
     public int ActionPointCost { get; protected set; }
+    public bool TargetsEnemies { get; protected set; }
 
     public ActionCard(ActionCardData Data)
     {
@@ -16,16 +17,34 @@ public class ActionCard : Card
         PlayEffect = Data.PlayEffect;
         ActionDesc = Data.Description;
         ActionPointCost = Data.ActionPointCost;
+        TargetsEnemies = Data.TargetsEnemies;
     }
 
     public override void Play()
     {
-        ITargetable target = TargetController.CurrentTarget;
-        Debug.Log("Playing " + Name + " on target.");
-
-        if (PlayEffect != null)
+        if (TargetsEnemies)
         {
-            PlayEffect.Activate(target);
+            ITargetable target = TargetController.CurrentTarget;
+
+            Debug.Log("Playing " + Name + " on target.");
+
+            if (PlayEffect != null)
+            {
+                PlayEffect.Activate(target);
+            }
+        }
+        else
+        {
+            IPlayer player = TargetController.CurrentPlayer;
+
+            ITargetable target = player as ITargetable;
+
+            Debug.Log("Playing " + Name + " on target.");
+
+            if (PlayEffect != null)
+            {
+                PlayEffect.Activate(target);
+            }
         }
     }
 }

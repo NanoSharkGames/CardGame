@@ -1,13 +1,19 @@
 ﻿using UnityEngine;
+using System;
 
 public class Creature : MonoBehaviour, ITargetable, IDamageable
 {
-    int _curHP = 10;
+    int _curHP = 25;
+
+    public static event Action Died;
 
     public void Kill()
     {
         Debug.Log("Kill the creature!");
         gameObject.SetActive(false);
+
+        Died?.Invoke();
+
     }
 
     public void TakeDamage(int damage)

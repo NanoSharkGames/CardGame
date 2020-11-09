@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour, ITargetable, IDamageable, IPlayer
+public class Player : MonoBehaviour, ITargetable, IDamageable, IPlayer, IBuffable
 {
+    public static event Action Died;
+
     [SerializeField] List<ActionCardData> _actionDeckConfig = new List<ActionCardData>();
     [SerializeField] PlayerHandUIController _playerHandUI;
 
@@ -38,12 +41,16 @@ public class Player : MonoBehaviour, ITargetable, IDamageable, IPlayer
     {
         Debug.Log("Kill the player!");
         gameObject.SetActive(false);
+
+        Died?.Invoke();
     }
 
     public void TakeDamage(int damage)
     {
         _curHP -= damage;
         Debug.Log("Took damage. Remaining health: " + _curHP);
+
+        FillStatsUI();
 
         if (_curHP <= 0)
         {
@@ -72,6 +79,12 @@ public class Player : MonoBehaviour, ITargetable, IDamageable, IPlayer
     {
         _curAP = _maxAP;
         Draw();
+    }
+
+    public void EndTurn()
+    {
+        _curAP = 0;
+        _playerHandUI.HideHand();
     }
 
     public void Draw()
@@ -109,15 +122,16 @@ public class Player : MonoBehaviour, ITargetable, IDamageable, IPlayer
     {
         for (int i = 0; i < _maxPlayerHandCards; i++)
         {
+            ActionCardView slot = _playerHandUI.GetHandSlot(i);
             ActionCard card = _playerHand.GetCard(i);
 
             if (card != null)
             {
-                _playerHandUI.handCards[i].AssignCardSlot(card);
+                slot.AssignCardSlot(card);
             }
             else
             {
-                _playerHandUI.handCards[i].EmptySlot();
+                slot.EmptySlot();
             }
         }
     }
@@ -144,6 +158,13 @@ public class Player : MonoBehaviour, ITargetable, IDamageable, IPlayer
 
             ResetPlayerHandUI();
         }
+    }
+
+    public void IncreaseDamage(int damageB)
+    {
+        _damageBonus += damageB;
+
+        FillStatsUI();
     }
 
     public int GetMaxHP()
