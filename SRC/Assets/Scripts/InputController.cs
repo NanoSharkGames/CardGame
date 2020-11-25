@@ -15,6 +15,11 @@ public class InputController : MonoBehaviour
         DetectCancel();
         DetectLeft();
         DetectRight();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     void DetectRight()

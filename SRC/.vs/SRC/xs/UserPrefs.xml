@@ -1,14 +1,39 @@
 ﻿<Properties StartupConfiguration="{C9DF638D-0DD9-EA4B-E977-23D2D893EDE3}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Card System/StateMachine/CardGame/EnemyTurnCardGameState.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Card System/Controllers/PlayerHandUIController.cs">
     <Files>
-      <File FileName="Assets/Scripts/Targets/Creature.cs" Line="6" Column="20" />
-      <File FileName="Assets/Scripts/Card System/StateMachine/CardGame/LoseState.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Card System/StateMachine/CardGame/WinState.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Card System/StateMachine/CardGame/CardGameState.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Card System/StateMachine/CardGame/EnemyTurnCardGameState.cs" Line="55" Column="10" />
-      <File FileName="Assets/Scripts/Card System/StateMachine/CardGame/PlayerTurnCardGameState.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Player.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/StateMachine/Base/StateMachine.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/InputController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Targets/Creature.cs" />
+      <File FileName="Assets/Scripts/Card System/StateMachine/CardGame/LoseState.cs" />
+      <File FileName="Assets/Scripts/Card System/StateMachine/CardGame/WinState.cs" />
+      <File FileName="Assets/Scripts/Card System/StateMachine/CardGame/CardGameState.cs" />
+      <File FileName="Assets/Scripts/Card System/StateMachine/CardGame/EnemyTurnCardGameState.cs" />
+      <File FileName="Assets/Scripts/Card System/StateMachine/CardGame/PlayerTurnCardGameState.cs" />
+      <File FileName="Assets/Scripts/Player.cs" />
+      <File FileName="Assets/Scripts/StateMachine/Base/StateMachine.cs" />
+      <File FileName="Assets/Scripts/Card System/StateMachine/CardGame/CardGameSM.cs" />
+      <File FileName="Assets/Scripts/Card System/StateMachine/CardGame/SetupCardGameState.cs" />
+      <File FileName="Assets/Scripts/Commands/ICommand.cs" />
+      <File FileName="Assets/Scripts/StateMachine/Base/State.cs" />
+      <File FileName="Assets/Scripts/Targets/IBuffable.cs" />
+      <File FileName="Assets/Scripts/Targets/IDamageable.cs" />
+      <File FileName="Assets/Scripts/Targets/IPlayer.cs" />
+      <File FileName="Assets/Scripts/Targets/ITargetable.cs" />
+      <File FileName="Assets/Scripts/Targets/TargetController.cs" />
+      <File FileName="Assets/Scripts/Card System/Deck/Card Effects/ActionEffects/Ability Actions/AttackDamageBoostPlayEffect.cs" />
+      <File FileName="Assets/Scripts/Card System/Deck/Card Effects/ActionEffects/AttackPlayEffect.cs" />
+      <File FileName="Assets/Scripts/Card System/Controllers/CardGameUIController.cs" />
+      <File FileName="Assets/Scripts/Card System/Controllers/PlayerHandUIController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Card System/Deck/Base/Deck.cs" />
+      <File FileName="Assets/Scripts/Card System/Deck/ActionCards/ActionCard.cs" />
+      <File FileName="Assets/Scripts/Card System/Deck/ActionCards/ActionCardData.cs" />
+      <File FileName="Assets/Scripts/Card System/Deck/ActionCards/ActionCardView.cs" />
+      <File FileName="Assets/Scripts/Card System/Deck/AbilityCards/Cards/AbilityCard.cs" />
+      <File FileName="Assets/Scripts/Card System/Deck/AbilityCards/Cards/AbilityCardData.cs" />
+      <File FileName="Assets/Scripts/Card System/Deck/AbilityCards/Cards/AbilityCardView.cs" />
+      <File FileName="Assets/Scripts/Card System/Deck/Card Effects/CardPlayEffect.cs" />
+      <File FileName="Assets/Scripts/Card System/Deck/Card Effects/DamagePlayEffect.cs" />
+      <File FileName="Assets/Scripts/Card System/Deck/Card Effects/SpawnPlayEffect.cs" />
+      <File FileName="Assets/Scripts/Card System/Controllers/PlayerStatsUIController.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -36,9 +61,7 @@
                     </Node>
                   </Node>
                   <Node name="StateMachine" expanded="True">
-                    <Node name="CardGame" expanded="True">
-                      <Node name="EnemyTurnCardGameState.cs" selected="True" />
-                    </Node>
+                    <Node name="CardGame" expanded="True" />
                   </Node>
                 </Node>
                 <Node name="Commands" expanded="True" />
@@ -46,6 +69,7 @@
                   <Node name="Base" expanded="True" />
                 </Node>
                 <Node name="Targets" expanded="True" />
+                <Node name="InputController.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -55,7 +79,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b640a4e6-d4bd-4cd2-9515-c324c95f72ab" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="dfa063f9-76fe-4669-b3fd-8cfbbf341a30" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
