@@ -18,3 +18,5 @@ MonoBehaviour:
   _playEffect: {fileID: 11400000, guid: 599287667d08840b0b30e514486f9d83, type: 2}
   _description: Bite for 6 DMG and restore HP
   _actionPointCost: 2
+  _targetsEnemies: 1
+  _soundToPlay: {fileID: 8300000, guid: 4142837f5f9984a5ea3a728ce109dff2, type: 3}

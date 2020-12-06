@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damageAmount: 8
   _attackRange: 1
-  _effectToInflict: 4
+  _effectToInflict: 3

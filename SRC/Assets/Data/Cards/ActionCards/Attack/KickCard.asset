@@ -18,3 +18,5 @@ MonoBehaviour:
   _playEffect: {fileID: 11400000, guid: f441a52c965724efb9532dd160a6af08, type: 2}
   _description: Kick for 2 DMG
   _actionPointCost: 1
+  _targetsEnemies: 1
+  _soundToPlay: {fileID: 8300000, guid: c41ca88e8fe1642e4a15d65c1dcc6822, type: 3}

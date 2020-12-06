@@ -8,6 +8,7 @@ public class ActionCard : Card
     public string ActionDesc { get; protected set; }
     public int ActionPointCost { get; protected set; }
     public bool TargetsEnemies { get; protected set; }
+    public AudioClip SoundToPlay { get; protected set; }
 
     public ActionCard(ActionCardData Data)
     {
@@ -18,10 +19,13 @@ public class ActionCard : Card
         ActionDesc = Data.Description;
         ActionPointCost = Data.ActionPointCost;
         TargetsEnemies = Data.TargetsEnemies;
+        SoundToPlay = Data.SoundToPlay;
     }
 
     public override void Play()
     {
+        AudioManager.audioInstance.PlaySound(SoundToPlay);
+
         if (TargetsEnemies)
         {
             ITargetable target = TargetController.CurrentTarget;

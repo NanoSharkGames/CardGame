@@ -18,3 +18,5 @@ MonoBehaviour:
   _playEffect: {fileID: 11400000, guid: f62f99539035b4c1d97324975f0de75b, type: 2}
   _description: Blind foe for 6 DMG
   _actionPointCost: 2
+  _targetsEnemies: 1
+  _soundToPlay: {fileID: 8300000, guid: 4098c3ff0cb9044fa86a17ecb46847e8, type: 3}

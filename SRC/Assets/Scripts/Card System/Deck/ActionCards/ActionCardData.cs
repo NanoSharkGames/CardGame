@@ -23,4 +23,7 @@ public class ActionCardData : ScriptableObject
 
     [SerializeField] bool _targetsEnemies = true;
     public bool TargetsEnemies => _targetsEnemies;
+
+    [SerializeField] AudioClip _soundToPlay = null;
+    public AudioClip SoundToPlay => _soundToPlay;
 }

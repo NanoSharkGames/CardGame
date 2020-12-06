@@ -11,10 +11,21 @@ public class WinState : CardGameState
         _winTextUI.gameObject.SetActive(true);
         
         _winTextUI.text = "Player Won!";
+
+        GameManager.gameManager.MatchWon();
+
+        // Hook into events
+        StateMachine.Input.PressedConfirm += OnPressedConfirm;
     }
 
     public override void Exit()
     {
         Debug.Log("Player Win: Exiting...");
+    }
+
+    void OnPressedConfirm()
+    {
+        SaveSystem.SaveGameData(GameManager.gameManager);
+        GameManager.gameManager.LoadNewScene(0);
     }
 }

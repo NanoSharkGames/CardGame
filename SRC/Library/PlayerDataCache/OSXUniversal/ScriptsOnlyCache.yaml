@@ -8,15 +8,20 @@ ScriptsOnlyBuild:
     - CardGameSM
     - CardGameUIController
     - Creature
-    - DeckTester
     - EnemyTurnCardGameState
     - InputController
+    - LoseState
+    - Player
     - PlayerHandUIController
+    - PlayerStatsUIController
     - PlayerTurnCardGameState
     - SetupCardGameState
     - TargetController
+    - WinState
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.Timeline.Editor.dll:
+    - TimelinePreferences
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -62,47 +67,53 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11724}
+      Script: {instanceID: 11804}
     - Class: 114
-      Script: {instanceID: 11760}
+      Script: {instanceID: 11840}
     - Class: 114
-      Script: {instanceID: 11828}
+      Script: {instanceID: 11842}
     - Class: 114
-      Script: {instanceID: 11912}
+      Script: {instanceID: 11910}
     - Class: 114
-      Script: {instanceID: 11952}
+      Script: {instanceID: 11984}
     - Class: 114
-      Script: {instanceID: 12390}
+      Script: {instanceID: 11994}
     - Class: 114
-      Script: {instanceID: 12408}
+      Script: {instanceID: 12034}
     - Class: 114
-      Script: {instanceID: 12564}
+      Script: {instanceID: 12474}
     - Class: 114
-      Script: {instanceID: 12740}
+      Script: {instanceID: 12492}
     - Class: 114
-      Script: {instanceID: 12864}
+      Script: {instanceID: 12516}
     - Class: 114
-      Script: {instanceID: 12876}
+      Script: {instanceID: 12650}
     - Class: 114
-      Script: {instanceID: 13046}
+      Script: {instanceID: 12828}
     - Class: 114
-      Script: {instanceID: 13408}
+      Script: {instanceID: 12952}
     - Class: 114
-      Script: {instanceID: 13414}
+      Script: {instanceID: 12964}
     - Class: 114
-      Script: {instanceID: 13438}
+      Script: {instanceID: 13134}
     - Class: 114
-      Script: {instanceID: 13518}
+      Script: {instanceID: 13458}
     - Class: 114
-      Script: {instanceID: 13666}
+      Script: {instanceID: 13500}
     - Class: 114
-      Script: {instanceID: 13668}
+      Script: {instanceID: 13506}
     - Class: 114
-      Script: {instanceID: 13740}
+      Script: {instanceID: 13530}
     - Class: 114
-      Script: {instanceID: 13808}
+      Script: {instanceID: 13758}
     - Class: 114
-      Script: {instanceID: 13882}
+      Script: {instanceID: 13760}
+    - Class: 114
+      Script: {instanceID: 13832}
+    - Class: 114
+      Script: {instanceID: 13902}
+    - Class: 114
+      Script: {instanceID: 13974}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -138,10 +149,16 @@ ScriptsOnlyBuild:
     className: TMP_SelectionCaret
   - hash:
       serializedVersion: 2
-      Hash: 4adf3aa4e45b961245e8f3391a1fb299
+      Hash: 285a8d145e68f1830027670791ea54f3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ActionCardData
+  - hash:
+      serializedVersion: 2
+      Hash: b3d66e901c60f613d7e81d73c8b342c5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WinState
   - hash:
       serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
@@ -184,6 +201,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 782705344e1d906d5652ecf3f43e95f7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerStatsUIController
   - hash:
       serializedVersion: 2
       Hash: 699619b86d9359741a4f58540298c80b
@@ -270,12 +293,6 @@ ScriptsOnlyBuild:
     className: AnimationTrack
   - hash:
       serializedVersion: 2
-      Hash: 527d79bda05f4696ebf5ae68b8613149
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MovePlayEffect
-  - hash:
-      serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -324,7 +341,7 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: ee6d82fdf51bae0d98b5fbb0f9912f4d
+      Hash: f3fbd2da11477fc78afd7082807f24bf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerHandUIController
@@ -334,6 +351,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 957dcf690c6c757e8f0692a9293dbc60
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -354,7 +377,7 @@ ScriptsOnlyBuild:
     className: CardGameState
   - hash:
       serializedVersion: 2
-      Hash: 815fb4558371f06e1c5a9e77992fd4fe
+      Hash: 0bbef20c043d230a43759a078b579e9c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerTurnCardGameState
@@ -402,7 +425,7 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
-      Hash: 9c8ff2b0b18fc24951bcb2a23be33bf0
+      Hash: 54e1c53d55e71074a56f50724d07415a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ActionCardView
@@ -492,6 +515,12 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
+      Hash: e90b1868549ac4d35e84b11a9f27d747
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LoseState
+  - hash:
+      serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -510,7 +539,7 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
+      Hash: 8e6ceabfd38a184413d69b7db56c89cc
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
@@ -520,12 +549,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CardGameUIController
-  - hash:
-      serializedVersion: 2
-      Hash: 3545f08c8655ffef8380647316feeaa5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DeckTester
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -540,7 +563,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 0c1cb4361a52bf3150719cc02ae74dc5
+      Hash: dc5eb63a3e2a25d5dbd0e86636127338
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TargetController
@@ -582,7 +605,7 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: 965dd79274ee9c91673fba0994a7e221
+      Hash: af33f7d185d6f248693a3491e1bcb312
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyTurnCardGameState
@@ -606,7 +629,7 @@ ScriptsOnlyBuild:
     className: TestRunCallbackListener
   - hash:
       serializedVersion: 2
-      Hash: c60c5cba0d5ed4f4a018240d6339217f
+      Hash: f1d735cc1a21c3704ab52568f4fbfcf8
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
     className: PlaymodeTestsController
@@ -664,6 +687,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: a40b37ea9048a699391c09179dec4356
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
+  - hash:
+      serializedVersion: 2
+      Hash: b5b30857f70aeac8a2673b20952e3ad0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AudioManager
   platform: 2
   scenePathNames:
   - Assets/Scenes/CardTest.unity

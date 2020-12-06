@@ -30,6 +30,7 @@ public class SetupCardGameState : CardGameState
 
     public override void Exit()
     {
+        GameManager.gameManager.StartBattle();
         Debug.Log("Setup: Exiting...");
     }
 }

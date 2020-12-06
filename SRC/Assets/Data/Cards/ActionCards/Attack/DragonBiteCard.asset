@@ -18,3 +18,5 @@ MonoBehaviour:
   _playEffect: {fileID: 11400000, guid: 521adbcb26aad4e1ba5d00593c1e3bc7, type: 2}
   _description: Poison bite target for 8 DMG
   _actionPointCost: 2
+  _targetsEnemies: 1
+  _soundToPlay: {fileID: 8300000, guid: 4fc9139ab8452476a8727d1073bd1e2c, type: 3}

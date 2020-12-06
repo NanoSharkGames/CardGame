@@ -18,3 +18,5 @@ MonoBehaviour:
   _playEffect: {fileID: 11400000, guid: 50a24f0bcd14c472db968650c038ab6e, type: 2}
   _description: Punch for 1 DMG
   _actionPointCost: 1
+  _targetsEnemies: 1
+  _soundToPlay: {fileID: 8300000, guid: 25d3aaa1e898f47afbec64c470dda576, type: 3}
