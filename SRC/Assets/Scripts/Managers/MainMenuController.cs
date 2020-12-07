@@ -11,8 +11,12 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] Text matchesWonTxt;
     [SerializeField] Text matchesLostTxt;
 
+    [SerializeField] AudioClip menuTrack;
+
     void Start()
     {
+        AudioManager.audioInstance.PlaySong(menuTrack);
+
         OpenMainMenu();
     }
 

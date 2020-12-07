@@ -21,6 +21,9 @@ public class WinState : CardGameState
     public override void Exit()
     {
         Debug.Log("Player Win: Exiting...");
+
+        // Unhook from events
+        StateMachine.Input.PressedConfirm -= OnPressedConfirm;
     }
 
     void OnPressedConfirm()

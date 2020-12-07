@@ -5,12 +5,15 @@ ScriptsOnlyBuild:
     - ActionCardView
     - AttackDamageBoostPlayEffect
     - AttackPlayEffect
+    - AudioManager
     - CardGameSM
     - CardGameUIController
     - Creature
     - EnemyTurnCardGameState
+    - GameManager
     - InputController
     - LoseState
+    - MainMenuController
     - Player
     - PlayerHandUIController
     - PlayerStatsUIController
@@ -20,8 +23,11 @@ ScriptsOnlyBuild:
     - WinState
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    Unity.Timeline.Editor.dll:
-    - TimelinePreferences
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -39,9 +45,79 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/CardTest.unity:
+    Assets/Scenes/MainMenu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11830}
+    - Class: 114
+      Script: {instanceID: 12020}
+    - Class: 114
+      Script: {instanceID: 12060}
+    - Class: 114
+      Script: {instanceID: 12444}
+    - Class: 114
+      Script: {instanceID: 12502}
+    - Class: 114
+      Script: {instanceID: 12536}
+    - Class: 114
+      Script: {instanceID: 12982}
+    - Class: 114
+      Script: {instanceID: 13068}
+    - Class: 114
+      Script: {instanceID: 13244}
+    - Class: 114
+      Script: {instanceID: 13260}
+    - Class: 114
+      Script: {instanceID: 13538}
+    - Class: 114
+      Script: {instanceID: 13716}
+    - Class: 114
+      Script: {instanceID: 13936}
+    - Class: 114
+      Script: {instanceID: 13948}
+    - Class: 114
+      Script: {instanceID: 13976}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Match.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -62,58 +138,60 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11804}
+      Script: {instanceID: 11830}
     - Class: 114
-      Script: {instanceID: 11840}
+      Script: {instanceID: 11866}
     - Class: 114
-      Script: {instanceID: 11842}
+      Script: {instanceID: 11868}
     - Class: 114
-      Script: {instanceID: 11910}
+      Script: {instanceID: 11936}
     - Class: 114
-      Script: {instanceID: 11984}
+      Script: {instanceID: 12010}
     - Class: 114
-      Script: {instanceID: 11994}
+      Script: {instanceID: 12020}
     - Class: 114
-      Script: {instanceID: 12034}
+      Script: {instanceID: 12060}
     - Class: 114
-      Script: {instanceID: 12474}
+      Script: {instanceID: 12502}
     - Class: 114
-      Script: {instanceID: 12492}
+      Script: {instanceID: 12520}
     - Class: 114
-      Script: {instanceID: 12516}
+      Script: {instanceID: 12544}
     - Class: 114
-      Script: {instanceID: 12650}
+      Script: {instanceID: 12678}
     - Class: 114
-      Script: {instanceID: 12828}
+      Script: {instanceID: 12858}
     - Class: 114
-      Script: {instanceID: 12952}
+      Script: {instanceID: 12982}
     - Class: 114
-      Script: {instanceID: 12964}
+      Script: {instanceID: 12994}
     - Class: 114
-      Script: {instanceID: 13134}
+      Script: {instanceID: 13166}
     - Class: 114
-      Script: {instanceID: 13458}
+      Script: {instanceID: 13490}
     - Class: 114
-      Script: {instanceID: 13500}
+      Script: {instanceID: 13532}
     - Class: 114
-      Script: {instanceID: 13506}
+      Script: {instanceID: 13538}
     - Class: 114
-      Script: {instanceID: 13530}
+      Script: {instanceID: 13562}
     - Class: 114
-      Script: {instanceID: 13758}
+      Script: {instanceID: 13792}
     - Class: 114
-      Script: {instanceID: 13760}
+      Script: {instanceID: 13794}
     - Class: 114
-      Script: {instanceID: 13832}
+      Script: {instanceID: 13866}
     - Class: 114
-      Script: {instanceID: 13902}
+      Script: {instanceID: 13936}
     - Class: 114
-      Script: {instanceID: 13974}
+      Script: {instanceID: 14010}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -149,7 +227,7 @@ ScriptsOnlyBuild:
     className: TMP_SelectionCaret
   - hash:
       serializedVersion: 2
-      Hash: 285a8d145e68f1830027670791ea54f3
+      Hash: bff3c156bd164abbe6b319ff6088475b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ActionCardData
@@ -329,6 +407,12 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: ab5fe5693edb7846beaa8bc7960e1a06
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenuController
+  - hash:
+      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -435,6 +519,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AudioManager
   - hash:
       serializedVersion: 2
       Hash: 023e4052f6b5b8b1a823a38287c90484
@@ -647,6 +737,12 @@ ScriptsOnlyBuild:
     className: StandaloneInputModule
   - hash:
       serializedVersion: 2
+      Hash: a40b37ea9048a699391c09179dec4356
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
+  - hash:
+      serializedVersion: 2
       Hash: 0ffaf073d4b1fa4e8036cf7ad52ddba7
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -687,19 +783,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: a40b37ea9048a699391c09179dec4356
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameManager
-  - hash:
-      serializedVersion: 2
-      Hash: b5b30857f70aeac8a2673b20952e3ad0
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: AudioManager
   platform: 2
   scenePathNames:
-  - Assets/Scenes/CardTest.unity
-  playerPath: /Users/nicotrevino/Documents/Unity/Builds/P02C.app
+  - Assets/Scenes/MainMenu.unity
+  - Assets/Scenes/Match.unity
+  playerPath: /Users/nicotrevino/Documents/College/Scripting II/Project 2/Builds/P02F.app

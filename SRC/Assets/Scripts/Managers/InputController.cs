@@ -8,7 +8,6 @@ public class InputController : MonoBehaviour
     public event Action PressedCancel = delegate { };
     public event Action PressedLeft = delegate { };
     public event Action PressedRight = delegate { };
-    public event Action PressedQuit = delegate { };
 
     void Update()
     {

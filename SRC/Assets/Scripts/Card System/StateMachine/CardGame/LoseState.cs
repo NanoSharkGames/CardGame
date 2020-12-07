@@ -21,6 +21,9 @@ public class LoseState : CardGameState
     public override void Exit()
     {
         Debug.Log("Player Loss: Exiting...");
+
+        // Unhook from events
+        StateMachine.Input.PressedConfirm -= OnPressedConfirm;
     }
 
     void OnPressedConfirm()

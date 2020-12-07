@@ -6,8 +6,6 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager audioInstance;
 
-    [SerializeField] AudioClip startingSong;
-
     AudioSource musicSource;
     AudioSource sfxSource;
 
@@ -29,15 +27,8 @@ public class AudioManager : MonoBehaviour
     {
         musicSource = gameObject.AddComponent<AudioSource>();
         musicSource.loop = true;
-        musicSource.volume = 1;
 
         sfxSource = gameObject.AddComponent<AudioSource>();
-        sfxSource.volume = 1;
-    }
-
-    void Start()
-    {
-        PlaySong(startingSong);
     }
 
     public void PlaySong(AudioClip newSong)
