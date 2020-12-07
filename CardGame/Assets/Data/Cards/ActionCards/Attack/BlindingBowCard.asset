@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87087f403f3a74248b480a1f711ed649, type: 3}
+  m_Name: BlindingBowCard
+  m_EditorClassIdentifier: 
+  _name: Blinding Bow
+  _cost: 4
+  _graphic: {fileID: 0}
+  _playEffect: {fileID: 11400000, guid: f62f99539035b4c1d97324975f0de75b, type: 2}
+  _description: Blind foe for 6 DMG
+  _actionPointCost: 2
+  _targetsEnemies: 1
+  _soundToPlay: {fileID: 8300000, guid: 4098c3ff0cb9044fa86a17ecb46847e8, type: 3}
